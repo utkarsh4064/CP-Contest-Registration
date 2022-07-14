@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gym</title>
+    <style>
+        body{
+            background: linear-gradient(black, orange);
+            height: 2000px;
+         }
+         a{
+             text-decoration: none;
+             color: white;
+         }
+         .libar
+         {
+             list-style: none;
+             float: left;
+             padding: 0px 20px 0px 20px;
+             margin: -9px 9px;
+         }
+         .libar :hover
+         {
+             list-style: none;
+             float: left;
+             color: black;
+             padding: 0px 20px 0px 20px;
+             border: 1px solid black;
+             border-radius: 20px;
+             background-color: rgb(15, 248, 15);
+         }
+         #ulbar
+         {
+            border: 20px solid;
+            border-width: 100%;
+            border-radius: 40px;
+         }
+         #navbar
+         {
+             position: fixed;
+             left: 20px;
+             top: 20px;
+             width: 97%;
+         }
+         #search
+         {
+             border: 2px solid;
+             border-radius: 20px;
+             padding: 4px 10px;
+             float: right;
+             margin: -14px 10px;
+         }
+         #pin
+         {
+             border: 2px solid;
+             display: inline-block;
+             padding: 10px 10px;
+             background-color: black;
+             position: fixed;
+             top: 530px;
+             left: 30px;
+             border-radius: 22px;
+         }
+         .form
+         {
+             border: 1px solid;
+             border-radius: 30px ;
+             padding: 4px 10px ;
+             text-align: center;
+             
+         }
+         button#first
+         {
+             color: brown;
+             background-color: rgb(4, 248, 17);
+             border: 1px solid;
+             border-radius: 20px;
+             padding: 4px 4px;
+             margin: 4px 4px;
+             position: fixed;
+             right: 120px;
+             bottom: 20px;
+         }
+         button#first:hover
+         {
+             background-color: darkorange;
+             padding: 10px 10px;
+             margin: -2px -4px;
+             transition: all 0.2s;
+             transform: scale(1,1);
+         }
+         button#second
+         {
+             color: brown;
+             background-color: rgb(17, 245, 245);
+             border: 1px solid;
+             border-radius: 20px;
+             padding: 4px 4px;
+             margin: 4px 4px;
+             position: fixed;
+             right: 10px;
+             bottom: 20px;
+         }
+         button#second:hover
+         {
+             background-color: darkorange;
+             padding: 10px 10px;
+             margin: -2px -4px;
+             transition: all 0.2s;
+             transform: scale(1,1);
+         }
+         #button
+         {
+             border: 8px solid;
+             border-radius: 20px;
+             background-color: black;
+             position: fixed;
+             bottom: 19px;
+             right: 10px;
+             display: inline-block;
+             height: 19px;
+             width: 178px;
+         }
+         footer
+         {
+             background-color: black;
+             height: 5%;
+             text-align: center;
+             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+             color: white;
+             padding: 20px;
+         }
+         .container
+         {
+             background-color: aliceblue;
+             border: 2px solid;
+             margin: 4px;
+             height: 100px;
+             display: flex;
+             flex-direction: column;
+         }
+     </style>
+
+</head>
+<body>
+    <link rel="stylesheet" href="gym.css">
+    <img src="static\img\aa577c257884a5ae68792513c31d9f64fd7bff5f.png" alt="some pic here" width="100%">
+    <img src="static\img\1_OhrAmSvpDWk0gzb_08PkhQ.png" alt="some pic here" width="100%" height="70%">
+    <footer> <pre> Thanks for visiting
+
+webpage designed and developed by:
+
+  <b>UTKARSH DIXIT</b></pre>
+    </footer>
+    
+    <nav id="navbar">
+        <ul id="ulbar">
+            <li class="libar"> <a href="#" class="abar">Home</a> </li>
+            <li class="libar"><a href="#" class="abar">About Us</a></li>
+            <li class="libar"><a href="#" class="abar">CP Courses</a></li>
+            <li class="libar"><a href="#" class="abar">Educational</a></li>
+            <li class="libar"><a href="#" class="abar">Contact Us</a></li>
+            <input id="search" type="text" placeholder="Search here....">
+        </ul>
+        
+    </nav>
+    <form action="/" id="pin" method="POST">
+        {% csrf_token %}
+        <br><br><input type="text" class="form" placeholder="Your name"       name="name">
+        <br><br><input type="text" class="form" placeholder="E-mail address " name="email">
+        <br><br><input type="text" class="form" placeholder="CodeForces rating"     name="rating">
+        <br><br><input type="text" class="form" placeholder="Other achievement(s) "  name="other">
+        <input type="submit" class="form">
+    </form>
+    
+    <div id="button">
+    <button id="first" onclick="document.getElementById('pin').style.backgroundColor= 'grey', document.getElementById('navbar').style.color='grey';" > Grey Zone 
+    </button>
+    <button id="second" onclick="document.getElementById('pin').style.backgroundColor= 'black', document.getElementById('navbar').style.color='black';" > Ninja Zone 
+    </button>
+</div>
+</body>
+</html>
